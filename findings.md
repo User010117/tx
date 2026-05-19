@@ -8,3 +8,7 @@
 - 目标 GitHub 仓库：`https://github.com/User010117/tx.git`。
 - 已成功配置远端 `origin` 指向目标仓库。
 - 已成功推送本地 `master` 分支到 `origin/master`。
+- 已发现新的未跟踪文件 `9876.txt`，本次未处理。
+- Git 全局配置已设置为更适合中文显示：中文文件名不转义，提交与日志编码为 UTF-8。
+- 用户级环境变量已设置：`LANG=zh_CN.UTF-8`、`LANGUAGE=zh_CN`。
+- 当前 Git for Windows 未发现中文 `git.mo` 翻译文件，因此 Git 状态提示仍可能显示英文。
