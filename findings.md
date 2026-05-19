@@ -19,3 +19,5 @@
 - 新增 `scripts/import-codex-chat.ps1`，可将项目 `chat_exports` 中的 `.jsonl` 恢复到本机 `~\.codex\sessions` 日期目录。
 - 新增 `scripts/sync-codex-chat.ps1`，用于快速执行导出，并可选执行导入。
 - Codex 原生聊天存储仍在用户目录；项目级跨设备同步需要显式导出、提交、拉取、导入。
+- Deep Code VS Code 插件源码仓库可打包为 `.vsix` 安装；当前安装结果为 `vegamo.deepcode-vscode@0.1.17`。
+- 本机存在 `~\.deepcode\settings.json`，安装过程未修改该配置。

@@ -24,3 +24,10 @@
 - 新增导入脚本 `scripts/import-codex-chat.ps1`，用于在另一台设备将项目内聊天记录导入本机 Codex sessions。
 - 新增同步脚本 `scripts/sync-codex-chat.ps1`，用于快速导出当前机器聊天记录，并可选导入项目内聊天记录。
 - 更新 `chat_exports/README.md`，记录跨设备同步流程和限制。
+- 用户要求下载安装 `lessweb/deepcode`。
+- 尝试通过 Marketplace ID `vegamo.deepcoding` 安装失败，VS Code CLI 返回扩展未找到。
+- 克隆 `https://github.com/lessweb/deepcode.git` 到临时目录。
+- 首次 `npm install` 遇到 peer dependency 冲突，改用 `npm install --legacy-peer-deps` 成功。
+- 执行 `npm run compile` 和 `npx @vscode/vsce package --allow-missing-repository` 成功生成 `deepcode-vscode-0.1.17.vsix`。
+- 使用 `code --install-extension` 本地安装 VSIX 成功，已验证扩展列表包含 `vegamo.deepcode-vscode@0.1.17`。
+- 检查到 `~\.deepcode\settings.json` 已存在，未覆盖配置，未记录 API Key。

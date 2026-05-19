@@ -15,6 +15,7 @@
 | 6 | complete | 配置本地 Git 客户端中文与 UTF-8 显示 |
 | 7 | complete | 添加聊天记录导出到项目目录的方案 |
 | 8 | complete | 支持跨设备导入和同步聊天记录 |
+| 9 | complete | 安装 Deep Code VS Code 插件 |
 
 ## 决策
 - 使用当前已有 Git 仓库，不重新初始化。
@@ -27,8 +28,12 @@
 - 聊天记录不建议直接同步整个 `.codex` 目录，避免泄露认证和内部状态文件；采用脚本只导出 `.codex\sessions` 下的 `.jsonl` 会话文件。
 - `chat_exports/*.jsonl` 默认被忽略，防止误上传；如需上传某个会话，使用 `git add -f` 强制添加。
 - 跨设备读取采用导出/导入方案：项目保存 `chat_exports`，另一台设备拉取后运行导入脚本复制到本机 Codex sessions。
+- Deep Code Marketplace 扩展 ID `vegamo.deepcoding` 未能通过 `code --install-extension` 找到；改为从 `lessweb/deepcode` 源码打包 VSIX 后安装。
+- 已安装 VS Code 扩展 `vegamo.deepcode-vscode@0.1.17`。
+- 本机已存在 `~\.deepcode\settings.json` 配置文件，未覆盖，也未记录 API Key。
 
 ## 遇到的错误
 | 错误 | 尝试次数 | 解决方案 |
 | --- | --- | --- |
 | 无 | 0 | 暂无 |
+| `code --install-extension vegamo.deepcoding` 找不到扩展 | 1 | 从 GitHub 源码构建 `.vsix` 并本地安装 |
