@@ -13,6 +13,7 @@
 | 4 | complete | 推送到 GitHub |
 | 5 | complete | 记录结果与后续注意事项 |
 | 6 | complete | 配置本地 Git 客户端中文与 UTF-8 显示 |
+| 7 | complete | 添加聊天记录导出到项目目录的方案 |
 
 ## 决策
 - 使用当前已有 Git 仓库，不重新初始化。
@@ -22,6 +23,8 @@
 - 已将本地 `master` 分支推送到远端 `origin/master`。
 - 已配置全局 Git 编码与语言环境：`LANG=zh_CN.UTF-8`、`LANGUAGE=zh_CN`、`core.quotepath=false`、`i18n.*=utf-8`。
 - 当前 Git for Windows 安装未发现中文翻译文件，命令提示文字可能仍显示英文；重开终端后环境变量对支持中文翻译的 Git 组件生效。
+- 聊天记录不建议直接同步整个 `.codex` 目录，避免泄露认证和内部状态文件；采用脚本只导出 `.codex\sessions` 下的 `.jsonl` 会话文件。
+- `chat_exports/*.jsonl` 默认被忽略，防止误上传；如需上传某个会话，使用 `git add -f` 强制添加。
 
 ## 遇到的错误
 | 错误 | 尝试次数 | 解决方案 |

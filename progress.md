@@ -15,3 +15,8 @@
 - 已设置用户环境变量：`LANG=zh_CN.UTF-8`、`LANGUAGE=zh_CN`。
 - 验证发现当前 Git 命令输出仍为英文，推断 Git for Windows 安装缺少中文翻译文件或需重开终端后才可部分生效。
 - 检查到未跟踪文件 `9876.txt`，没有加入提交。
+- 用户询问聊天记录是否可以放在当前项目文件夹便于上传下载。
+- 新增导出目录说明文件 `chat_exports/README.md`。
+- 新增导出脚本 `scripts/export-codex-chat.ps1`，默认导出最近一次 Codex 会话，支持 `-All` 导出全部会话。
+- 已运行导出脚本，最近一次会话已复制到项目 `chat_exports\2026-05-19` 下。
+- 新增 `chat_exports/.gitignore` 默认忽略 `.jsonl`，避免误传聊天记录。
