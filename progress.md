@@ -31,3 +31,7 @@
 - 执行 `npm run compile` 和 `npx @vscode/vsce package --allow-missing-repository` 成功生成 `deepcode-vscode-0.1.17.vsix`。
 - 使用 `code --install-extension` 本地安装 VSIX 成功，已验证扩展列表包含 `vegamo.deepcode-vscode@0.1.17`。
 - 检查到 `~\.deepcode\settings.json` 已存在，未覆盖配置，未记录 API Key。
+- 用户要求安装 DeepSeek-TUI。
+- 查询官方安装文档后采用推荐 npm 路径：`npm install -g deepseek-tui`。
+- 安装成功，验证 `deepseek --version` 与 `deepseek-tui --version` 均显示 npm wrapper `v0.8.39`、binary `v0.8.39`。
+- 检查到 `~\.deepseek` 配置目录尚不存在；未创建或记录 API Key。

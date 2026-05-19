@@ -16,6 +16,7 @@
 | 7 | complete | 添加聊天记录导出到项目目录的方案 |
 | 8 | complete | 支持跨设备导入和同步聊天记录 |
 | 9 | complete | 安装 Deep Code VS Code 插件 |
+| 10 | complete | 安装 DeepSeek-TUI 终端客户端 |
 
 ## 决策
 - 使用当前已有 Git 仓库，不重新初始化。
@@ -31,6 +32,8 @@
 - Deep Code Marketplace 扩展 ID `vegamo.deepcoding` 未能通过 `code --install-extension` 找到；改为从 `lessweb/deepcode` 源码打包 VSIX 后安装。
 - 已安装 VS Code 扩展 `vegamo.deepcode-vscode@0.1.17`。
 - 本机已存在 `~\.deepcode\settings.json` 配置文件，未覆盖，也未记录 API Key。
+- 已通过 npm 全局安装 `deepseek-tui@0.8.39`，命令 `deepseek` 和 `deepseek-tui` 均可用。
+- 当前尚未发现 `~\.deepseek` 配置目录，DeepSeek-TUI 首次使用仍需执行登录或启动向导，不在项目中保存 API Key。
 
 ## 遇到的错误
 | 错误 | 尝试次数 | 解决方案 |

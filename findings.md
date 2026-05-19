@@ -21,3 +21,6 @@
 - Codex 原生聊天存储仍在用户目录；项目级跨设备同步需要显式导出、提交、拉取、导入。
 - Deep Code VS Code 插件源码仓库可打包为 `.vsix` 安装；当前安装结果为 `vegamo.deepcode-vscode@0.1.17`。
 - 本机存在 `~\.deepcode\settings.json`，安装过程未修改该配置。
+- DeepSeek-TUI 官方推荐安装路径之一为 `npm install -g deepseek-tui`，npm 包会下载对应平台二进制并暴露 `deepseek` 与 `deepseek-tui` 命令。
+- 本机安装结果：`deepseek-tui@0.8.39`，二进制版本 `v0.8.39`。
+- 本机尚无 `~\.deepseek` 配置目录，需要首次登录/启动时配置 API Key。
