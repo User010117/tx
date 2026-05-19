@@ -20,3 +20,7 @@
 - 新增导出脚本 `scripts/export-codex-chat.ps1`，默认导出最近一次 Codex 会话，支持 `-All` 导出全部会话。
 - 已运行导出脚本，最近一次会话已复制到项目 `chat_exports\2026-05-19` 下。
 - 新增 `chat_exports/.gitignore` 默认忽略 `.jsonl`，避免误传聊天记录。
+- 用户询问另一台设备下载项目后能否读取聊天记录，并继续把后续聊天保存到当前项目文件夹来跨设备同步。
+- 新增导入脚本 `scripts/import-codex-chat.ps1`，用于在另一台设备将项目内聊天记录导入本机 Codex sessions。
+- 新增同步脚本 `scripts/sync-codex-chat.ps1`，用于快速导出当前机器聊天记录，并可选导入项目内聊天记录。
+- 更新 `chat_exports/README.md`，记录跨设备同步流程和限制。
