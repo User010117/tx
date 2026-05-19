@@ -17,6 +17,7 @@
 | 8 | complete | 支持跨设备导入和同步聊天记录 |
 | 9 | complete | 安装 Deep Code VS Code 插件 |
 | 10 | complete | 安装 DeepSeek-TUI 终端客户端 |
+| 11 | complete | 安装并验证 Hermes Agent |
 
 ## 决策
 - 使用当前已有 Git 仓库，不重新初始化。
@@ -34,9 +35,13 @@
 - 本机已存在 `~\.deepcode\settings.json` 配置文件，未覆盖，也未记录 API Key。
 - 已通过 npm 全局安装 `deepseek-tui@0.8.39`，命令 `deepseek` 和 `deepseek-tui` 均可用。
 - 当前尚未发现 `~\.deepseek` 配置目录，DeepSeek-TUI 首次使用仍需执行登录或启动向导，不在项目中保存 API Key。
+- Hermes Agent 已按官方 PowerShell 安装器安装/更新，当前版本 `v0.14.0`，路径为 `C:\Users\27346\AppData\Local\hermes\hermes-agent`。
+- Hermes 配置位于 `C:\Users\27346\AppData\Local\hermes`，安装器保留已有 `.env` 和 `config.yaml`，未向项目写入任何密钥。
+- `hermes doctor` 核心检查通过；可选项提示缺少部分第三方服务密钥、Docker、Discord/Telegram 包等，属于非必要能力。
 
 ## 遇到的错误
 | 错误 | 尝试次数 | 解决方案 |
 | --- | --- | --- |
 | 无 | 0 | 暂无 |
 | `code --install-extension vegamo.deepcoding` 找不到扩展 | 1 | 从 GitHub 源码构建 `.vsix` 并本地安装 |
+| Hermes 旧版本提示落后 | 1 | 运行官方安装器更新到 `v0.14.0` |

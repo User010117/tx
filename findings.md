@@ -24,3 +24,6 @@
 - DeepSeek-TUI 官方推荐安装路径之一为 `npm install -g deepseek-tui`，npm 包会下载对应平台二进制并暴露 `deepseek` 与 `deepseek-tui` 命令。
 - 本机安装结果：`deepseek-tui@0.8.39`，二进制版本 `v0.8.39`。
 - 本机尚无 `~\.deepseek` 配置目录，需要首次登录/启动时配置 API Key。
+- Hermes Agent 官方 Windows 安装命令可通过 PowerShell 执行安装器：`iex (irm https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1)`。
+- 本机 Hermes 安装结果：`Hermes Agent v0.14.0 (2026.5.16)`，Python `3.11.15`，OpenAI SDK `2.24.0`。
+- `hermes doctor` 显示核心功能可用，浏览器工具与 Playwright Chromium 已安装；完整工具能力仍取决于可选 API Key 和外部服务配置。

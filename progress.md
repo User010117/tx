@@ -35,3 +35,9 @@
 - 查询官方安装文档后采用推荐 npm 路径：`npm install -g deepseek-tui`。
 - 安装成功，验证 `deepseek --version` 与 `deepseek-tui --version` 均显示 npm wrapper `v0.8.39`、binary `v0.8.39`。
 - 检查到 `~\.deepseek` 配置目录尚不存在；未创建或记录 API Key。
+- 用户要求安装 Hermes，并提供官方安装文档链接。
+- 检查到本机已有 Hermes `v0.13.0`，路径在 `%LOCALAPPDATA%\hermes\hermes-agent\venv\Scripts\hermes.exe`。
+- 运行 `hermes doctor` 确认旧安装核心可用，但提示可更新。
+- 执行官方 PowerShell 安装器，安装器更新 Hermes 源码、创建 Python `3.11.15` 虚拟环境、安装依赖、安装浏览器工具和 Playwright Chromium。
+- 验证 `hermes --version` 显示 `Hermes Agent v0.14.0 (2026.5.16)`。
+- 验证 `hermes doctor` 核心检查通过，仅剩可选服务/密钥配置提示；未修改或记录密钥内容。
